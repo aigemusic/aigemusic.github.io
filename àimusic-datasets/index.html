@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>ai.midilib.com</title>
+    <meta name="generator" content="Jekyll v3.9.0" />
+    <meta property="og:title" content="ai.midilib.com" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="http://ai.midilib.com/" />
+    <meta property="og:url" content="http://ai.midilib.com/" />
+    <meta property="og:site_name" content="ai.midilib.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="ai.midilib.com" />
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"ai.midilib.com","name":"ai.midilib.com","url":"http://ai.midilib.com/"}</script>
+    <!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=d5a2bc49ecd38ae4c6469c0d7b6e3b6d8a6b91ee">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+    <!-- Setup Google Analytics -->
+
+
+
+    <!-- You can set your favicon here -->
+    <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+    <!-- end custom head snippets -->
+
+</head>
+
+<body>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+
+        <h1 id="aigetechgithubio">àimusic datasets</h1>
+        <a href="./àimusic-datasets.zip">download datasets</a><br>
+        <a href="./datas/data-tone/">view datasets</a>
+        <h2 id="aigetechgithubio">dataset format</h2>
+        <div>
+            <code>C:KeyMode.MAJOR</code> #Tonality of the file<br>
+            <code>[74,74,74,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,72,72,76,76,76,76,74,74,74,74,74,74,74,74,74,71,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,60,65,65,65,65,65,65,67,67,67,64,64,64,64,64,64,64,64,64,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62]</code>
+            #melody,every 4 notes correspond to a chord<br>
+            <code>[[38,41,45],[41,45,48],[41,45,48],[43,47,50],[43,47,50],[45,48,52],[45,48,52],[45,48,52],[45,48,52],[45,48,52],[45,48,52],[45,48,52],[45,48,52],[36,40,43],[36,40,43],[45,48,52],[45,48,52],[41,45,48],[41,45,48],[36,40,43],[36,40,43],[43,47,50],[43,47,50],[43,47,50],[43,47,50],[43,47,50],[43,47,50],[43,47,50],[43,47,50],[38,42,45]]</code>
+            #chord
+        </div>
+        <h2 id="aigetechgithubio">parse file</h2>
+        <code>file = open("./datas/data-tone/1.txt")  # open file</code><br>
+        <code>arr = file.read().split("\n")  # read file</code><br>
+        <code>tone = arr[0]  # get Tonality</code><br>
+        <code>print(tone)</code><br>
+        <code>melody = arr[1].strip("[]").split(",")  # get melody</code><br>
+        <code>print(melody)</code><br>
+        <code>chord = arr[2].lstrip("[").rstrip("]").split("],[")  # get chord</code><br>
+        <code>print(chord)</code><br>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+</body>
+
+</html>
